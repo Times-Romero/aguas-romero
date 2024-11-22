@@ -1,0 +1,274 @@
+/*Importar los estilos de letra*/
+@font-face {
+    font-family: bebas;
+    src: url(fonts/BebasNeue-Regular.ttf);
+}
+@font-face {
+    font-family: bokor;
+    src: url(fonts/Bokor-Regular.ttf);
+}
+@font-face {
+    font-family: edubold;
+    src: url(fonts/EduAUVICWANTPre-Bold.ttf);
+}
+@font-face {
+    font-family: edmedium;
+    src: url(fonts/EduAUVICWANTPre-Medium.ttf);
+}
+@font-face {
+    font-family: edregular;
+    src: url(fonts/EduAUVICWANTPre-Regular.ttf);
+}
+@font-face {
+    font-family:edsemi;
+    src: url(fonts/EduAUVICWANTPre-SemiBold.ttf);
+}
+@font-face {
+    font-family: edvariable;
+    src: url(fonts/EduAUVICWANTPre-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family:sour;
+    src: url(fonts/SourGummy-SemiBoldItalic.ttf);
+}
+/*Termina importación de estilos de letra*/
+/* General*/
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    padding-top: 230px;
+}
+
+/* Header Customization */
+.header {
+    background-color: #3db0c7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fijamos la cabecera */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* Aseguramos que la cabecera esté encima del contenido */
+    padding: 10px 0; /* Espaciado adicional para la cabecera */
+}
+
+
+.header img {
+    border-radius: 50%; /* Circular logo */
+    width: 150px;
+    height: 150px;
+}
+.navbar {
+    background-color: #3db0c7;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* Estilo de enlaces del menú */
+.navbar-nav .nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    transition: color 0.3s ease;
+    color: white;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffc107; /* Color de hover */
+}
+
+/* Form Styles */
+form {
+    background: #888;
+    padding: 50px 50px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 340px;
+}
+.mb-3{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+form .form-control {
+    border-radius: 4px;
+}
+
+form .btn {
+    font-size: 16px;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 25px;
+    background-color: #51D94C;
+    box-shadow: 0 0 20px rgba(25, 254, 0, 0.4);
+    cursor: pointer;
+}
+
+form .btn:hover {
+    /*background-color: #50E04B;*/
+    background-color: beige;
+    color: black;
+}
+
+/* Map Section */
+iframe {
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+/* Custom Titles */
+h2{
+    color:#668808;
+    text-align: justify;text-align: center;
+    font-family: edvariable;
+ }
+ p{
+     font-family: 'Times New Roman';
+     font-size: 22px;
+     text-align: justify;
+     margin-bottom: 1.6em;
+ }
+ ul{
+    font-family: 'Times New Roman';
+    font-size: 20px;
+    text-align: justify;
+ }
+ li{
+    font-family: 'Times New Roman';
+    text-align: justify;
+ }
+ h1{
+    line-height: 1.3em;
+    color: #3db0c7;
+    font-family: bokor;
+}
+
+
+/*Pie de Pagina con los logos*/
+.footer{
+    background-color: black;
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+}
+.footer ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+  
+}
+.footer li{
+    margin: 0 10px;
+}
+.footer-icon{
+    width: 160px;
+    height: 160px;
+}
+/*Cierre de los pies de págna*/
+
+/* Estilos para la ventana emergente */
+.emergente {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.emergente-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+/* Estilo del botón del icono de hamburguesa */
+.navbar-toggler {
+    border: 1px solid #007bff; /* Añadir borde para hacer el icono más visible */
+}
+
+/* Estilo del icono de hamburguesa */
+.navbar-toggler-icon {
+    background-color: white; /* Color del icono de hamburguesa */
+    height: 3px; /* Grosor de las barras */
+    width: 25px; /* Longitud de las barras */
+    border-radius: 5px;
+    /*position: relative;*/
+    position: auto;
+}
+
+/* Agregar más estilo a las barras del icono de hamburguesa si es necesario */
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    background-color: white; /* Asegurarse de que las barras sean visibles */
+}
+
+/* Menú colapsado en pantallas pequeñas */
+@media only screen and (max-width: 768px) {
+    .navbar-toggler {
+        display: block; /* Mostrar el icono de menú en pantallas pequeñas */
+        background-color: #007bff; /* Color de fondo del botón */
+    }
+
+    .navbar-toggler-icon {
+        background-color: white; /* Color de las barras del icono */
+    }
+    /*Formulario de forma responsive*/
+form{
+    padding: 50px 30px;
+    width: 85%;
+}
+input {
+    padding: 15px;
+}
+
+}
+
+
+/* En pantallas grandes, el menú no se colapsa */
+@media only screen and (min-width: 769px) {
+    .navbar-nav .nav-link {
+        font-size: 18px; /* Tamaño de fuente en pantallas grandes */
+        color: white; /* Color del texto de los enlaces */
+    }
+
+    .navbar-toggler {
+        display: none; /* Ocultar el icono en pantallas grandes */
+    }
+
+    .navbar-collapse {
+        display: flex !important; /* El menú debe estar siempre visible */
+    }
+}
